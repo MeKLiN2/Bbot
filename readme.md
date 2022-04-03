@@ -152,4 +152,4 @@ See [LICENSE](https://github.com/nortxort/nortbot/blob/master/LICENSE) for more 
 
 [Technetium1](https://github.com/Technetium1)
 
-[Aida](https://github.com/Autotonic) k
+[Aida](https://github.com/Autotonic)
