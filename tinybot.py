@@ -135,21 +135,21 @@ class TinychatBot(pinylib.TinychatRTCClient):
 
         if _user.nick.startswith('guest-'):
             #self.send_chat_msg("guest")
-            self.do_ban(self.active_user.nick)
+            #self.do_ban(self.active_user.nick)
             #self.send_chat_msg("Guest names not allowed.")
 
 
-        if _user.account:
+            if _user.account:
 
         	
 
-            if _user.is_owner or _user.account in adminlist:
-                _user.user_level = 1
-                self.console_write(pinylib.COLOR['red'], '%s:%s' % (_user.nick, _user.account))
-                if not _user.account in knownlist:
+                    if _user.is_owner or _user.account in adminlist:
+                        _user.user_level = 1
+                        self.console_write(pinylib.COLOR['red'], '%s:%s' % (_user.nick, _user.account))
+                    if not _user.account in knownlist:
 
-                    pinylib.file_handler.file_writer(self.config_path, pinylib.CONFIG.B_known, _user.account)
-                    self.send_chat_msg('Admin saved to whitelist: %s' % _user.account)
+                        pinylib.file_handler.file_writer(self.config_path, pinylib.CONFIG.B_known, _user.account)
+                        self.send_chat_msg('Admin saved to whitelist: %s' % _user.account)
                 #self.send_chat_msg('Room Owner %s has joined.' % _user.nick)
 
             elif _user.is_mod:
